@@ -1,0 +1,37 @@
+{
+  "name": "generate-change-log",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm i && pkg ."
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "db-evo-reborn": "./main.js"
+  },
+  "pkg": {
+    "scripts": "main.js",
+    "assets": [
+      "node_modules/**/*"
+    ],
+    "targets": [
+      "node16-macos-x64",
+      "node16-linux-x64",
+      "node16-win-x64"
+    ],
+    "outputPath": "dist"
+  },
+  "dependencies": {
+    "glob": "^10.3.10",
+    "minimist": "^1.2.8",
+    "pg": "^8.11.3",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1"
+  }
+}

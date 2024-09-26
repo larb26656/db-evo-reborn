@@ -1,0 +1,15 @@
+node_modules/
+npm-debug.log
+.env
+.DS_Store
+coverage/
+dist/
+build/
+*.log
+*.env
+
+# temp
+change-log-for-exec-diff-db/
+
+# config file
+config.json
