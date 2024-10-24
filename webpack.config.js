@@ -1,4 +1,6 @@
 const path = require("path");
+const webpack = require("webpack");
+const packageJson = require("./package.json");
 
 module.exports = {
   entry: "./main.js", // Replace with your entry file
@@ -11,6 +13,11 @@ module.exports = {
   externals: {
     "pg-native": "commonjs pg-native",
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env.VERSION": JSON.stringify(packageJson.version),
+    }),
+  ],
   module: {
     rules: [
       {
