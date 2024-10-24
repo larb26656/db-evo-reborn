@@ -11,3 +11,6 @@ ifeq ($(OS_TYPE),Windows)
 else
 	$(SHELL_CMD) ci/version/create-change-log.sh
 endif
+
+build:
+	npm run build
