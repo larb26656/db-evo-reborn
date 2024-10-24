@@ -64,7 +64,7 @@ function createChangelog(config) {
   console.log("Create changelog file success");
 }
 
-async function initDiffDb(config) {
+function initDiffDb(config) {
   const osType = os.type();
   let command = config.changeLogCreator.initDiffDbScript.default;
 
